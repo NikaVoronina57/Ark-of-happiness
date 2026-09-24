@@ -1,16 +1,25 @@
-# React + Vite
+# Ковчег радости
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+React‑приложение на Vite для «Ковчег Радости». 
+## О проекте
 
-Currently, two official plugins are available:
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Oxc](https://oxc.rs)
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/)
+Ключевые особенности:
+* каталог товаров с фильтрацией по категориям;
+* расчёт доставки на основе веса товара (поле `weight` добавлено в данные);
+* форма заказа с выбором ПВЗ (без указания даты доставки);
 
-## React Compiler
+Структура
+src/components/ — переиспользуемые компоненты (ActivityCard, Footer, Header, ContactCard и т.д.).
+src/pages/ — страницы (HomePage, CatalogPage, AboutPage, GalleryPage и т.д.).
+public/ — статические файлы (изображения, favicon).
+src/data/ — фиктивные данные и утилиты.
 
-The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
+## Как запустить локально
 
-## Expanding the ESLint configuration
+1. Убедись, что установлен Node.js.
+2. В терминале в папке проекта выполни:
+   ```bash
+   npm install
+   npm run dev
 
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
