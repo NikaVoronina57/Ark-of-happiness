@@ -1,0 +1,263 @@
+.catalog-grid{
+min-height: 20rem;
+}
+.catalog-categories {
+  width: 100%;
+  
+  margin-bottom: 2rem;       /* отступ до карточек */
+  padding: 0 1rem;            /* чтобы на мобильном не вылезало за экран */
+}
+.catalog-section-title {
+  margin: 0 0 1.5rem 0;
+  font-size: 1.5rem;
+}
+
+
+
+
+
+.catalog-page {
+  width: 100%;
+  max-width: 1300px;
+  margin: 3rem auto;
+  padding: 0px 1rem;
+  box-sizing: border-box;
+  text-align: center;
+}
+.catalog-header{
+  margin-bottom: 1rem;
+  
+}
+.catalog-header h1{
+  margin-bottom: 1.5rem;
+}
+.catalog-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(240px, 1fr));
+  
+  gap: 1rem;
+  width: 100%;
+}
+
+.catalog-card {
+  background: #fff;
+  border-radius: 16px;
+  padding: 1rem 1rem 0rem 1rem;
+   
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.06);
+  cursor: pointer;
+  transition: transform 0.3s ease;
+  display: flex;
+  flex-direction: column;
+  max-width: 300px; 
+  margin: 0;
+}
+
+.catalog-card:hover {
+  transform: translateY(-6px);
+  box-shadow: 0 12px 24px rgba(0, 0, 0, 0.12);
+}
+
+.card-image {
+  width: 100%;
+  height: 200px;
+  object-fit: cover;
+  display: block;
+  margin-bottom: 1.5rem;
+  border-radius: 12px;
+}
+
+.card-info h3 {
+  margin: 0 0 0.5rem 0;
+  font-size: 1.25rem;
+}
+.card-info {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  gap: .5rem;
+}
+.card-price {
+  margin: 0;
+  font-weight: 400;
+  color: rgb(54, 52, 52);
+  
+}
+
+.modal-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.6);
+  z-index: 1000;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  backdrop-filter: blur(4px);
+  
+}
+.modal-content {
+  background: white;
+  padding: 24px;
+  border-radius: 16px;
+  width: 90%;
+  max-width: 400px;
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.2);
+  position: relative;
+  z-index: 1001;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.close-btn {
+  position: absolute;
+  top: 2rem;
+  right: 1.25rem;
+  background: none;
+  border: none;
+  font-size: 1.75rem;
+  cursor: pointer;
+  color: #c4bbbb;
+  line-height: 1;
+}
+
+@keyframes blob-enter {
+  from {
+    transform: translate(40px, -40px) scale(0.8);
+    opacity: 0;
+  }
+  to {
+    transform: translate(0, 0) scale(1);
+    opacity: 0.6;
+  }
+}
+
+.modal-body {
+  position: relative;
+  z-index: 1;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 2rem;
+  align-items: center;
+}
+
+.modal-image {
+  width: 100%;
+  max-width: 300px;
+  height: 250px;
+  object-fit: cover;
+  margin-left: 21px;
+  border-radius: 12px;
+  margin-bottom: 16px;
+  display: block;
+}
+
+.modal-info {
+  flex: 1 1 220px;
+  text-align: center;
+}
+
+.modal-info h2 {
+  margin: 0 0 0.5rem 0;
+  font-size: 1.75rem;
+}
+
+.modal-price {
+  font-size: 1.25rem;
+  font-weight: 700;
+  color: #08333b;
+  margin: 0.5rem 0;
+}
+
+.modal-description {
+  color: #555;
+  line-height: 1.5;
+  margin: 0 0 1.5rem 0;
+}
+
+.buy-btn {
+  background: #2e7d32;
+  color: #fff;
+  border: none;
+  padding: 0.75rem 0.5rem;
+  border-radius: 50px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: background 0.2s;
+}
+
+.buy-btn:hover {
+  background: #1b5e20;
+}
+
+.add-to-cart-btn {
+  margin-top: auto;
+  align-self: center;
+  margin-top: 7px;
+  max-width: 150px;
+  max-height: 30px;
+  display: inline-flex;
+  
+  font-size: 12px;
+  align-items: center;
+  justify-content: center;
+  text-transform: uppercase;
+  text-align: center;
+  letter-spacing: 1.3px;
+  font-weight: 700;
+  color: #313133;
+  background: none;
+  border-radius: 8px;
+  border: none;
+  padding: 14px 14px; 
+  box-shadow: #8064179b 1px 1px 7px;
+
+  
+  margin-bottom: 1.5rem;
+  
+  
+  
+}
+.add-to-cart-btn.added,
+.buy-btn.added {
+  background-color: #1963424d;
+  color: #494744;
+  cursor: not-allowed;
+}
+
+
+
+@media (max-width: 768px) {
+  .catalog-page {
+    margin: 2rem auto;
+    padding: 0 1rem;
+  }
+
+  .catalog-grid {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    margin: 0;
+    gap: 1rem;
+
+    justify-items: center;
+    
+  }
+
+  .catalog-card {
+    padding: 1rem ;
+    margin: 1rem auto;
+  }
+
+  .card-image {
+    height: 180px;
+  }
+}
+
+
+
+
+

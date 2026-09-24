@@ -1,0 +1,41 @@
+.site-footer {
+  position: relative;
+  width: 100%;
+ 
+
+  overflow: hidden;
+
+  background-color: #194874;
+  color: white;
+
+  padding: 40px 0 20px; 
+  box-sizing: border-box;
+}
+.site-footer::before {
+  content: "";
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  height: 170px;
+
+  background-image: var(--wave-image);
+  background-repeat: no-repeat;
+  background-position: bottom center;
+  background-size: 100% 100%; 
+
+  z-index: 0; 
+}
+.footer-content {
+  position: relative;
+  z-index: 1;
+  text-align: center;  
+}
+
+.footer-content p {
+  margin: 0;
+  font-size: 0.95rem;
+  line-height: 1.5;
+}
+
+

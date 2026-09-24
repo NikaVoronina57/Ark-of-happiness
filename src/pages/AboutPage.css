@@ -1,0 +1,383 @@
+
+.Aboutpage{
+  margin: 3rem auto;
+  
+  text-align: center;
+}
+.section-about h2{
+  display: flex;
+  justify-content: center;
+   font-family: 'Comfortaa', sans-serif,system-ui;
+}
+
+
+
+.hero-project {
+  padding: rem 0 3rem;
+  text-align: center;
+}
+
+.hero-emote {
+  margin: 0 auto;
+  width: 75px;
+  height: 75px;
+  display: inline-block; /* Или flex */
+  transition: transform 1s ease-in-out;
+}
+  .hero-emote:hover,
+.hero-emote:focus-within {
+  animation: rockingBoat 2s infinite alternate-reverse;
+  
+}
+
+@keyframes rockingBoat {
+  from {
+    transform: rotate(-4deg);
+  }
+  to {
+    transform: rotate(4deg);
+  }
+}
+
+
+
+.hero-project h1 {
+  font-size: clamp(2rem, 3vw, 3.2rem);
+  color: #6b5353;
+  margin-bottom: 1.25rem;
+  padding: 10px 20px;
+  line-height: 1.1;
+  max-width: 1100px;
+  margin: 0 auto;
+}
+
+.hero-lead {
+  font-size: 20px;
+  color: #4a4a55;
+  max-width: 700px;
+  margin: 1rem auto 2.5rem;
+  line-height: 1.6;
+}
+
+
+.section-title {
+  text-align: center;
+  margin: 3rem 0 2rem;
+  color: #222;
+  font-weight: 600;
+}
+
+
+.project-intro p {
+  font-size: 20px;
+  line-height: 1.7;
+  color: #333;
+  margin-bottom: 1.25rem;
+ text-align: center;
+  max-width: 1100px;
+}
+
+
+.activities-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(240px, 1fr));
+  gap: 1.5rem;
+  margin-bottom: 4rem;
+  margin-left: auto;
+  margin-right: auto;
+  max-width: 850px;
+}
+
+
+.activity-card {
+  background: white;
+  border-radius: var(--radius, 12px);
+  box-shadow: var(--shadow, 0 4px 12px rgba(0,0,0,0.08));
+  padding: 1.5rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+}
+
+.activity-icon {
+  width: 64px;
+  height: 64px;
+  background-color: #f8f9fa;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #5f4e52;
+  font-size: 1.5rem;
+  margin-bottom: 1rem;
+}
+
+.activity-title {
+  font-weight: 700;
+  margin-bottom: 0.5rem;
+  color: #1a1a2e;
+}
+
+
+.facts-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+  gap: 1rem;
+  margin-top: 1.5rem;
+  margin-left: auto;
+  margin-right: auto;
+  max-width: 850px;
+  
+}
+
+.fact-card {
+  background: #fff;
+  border: 1px solid #e5e7eb;
+  border-radius: var(--radius, 8px);
+  padding: 1rem;
+  text-align: center;
+  box-shadow: var(--shadow, 0 2px 6px rgba(0,0,0,0.04));
+}
+
+.fact-value {
+  display: block;
+  font-weight: 700;
+  font-size: 1.1rem;
+  color: #1a1a2e;
+  margin-bottom: 0.25rem;
+}
+
+.fact-label {
+  display: block;
+  font-size: 0.9rem;
+  color: #6b7280;
+}
+
+
+.support-section {
+  background-color: #fff;
+  border-radius: var(--radius, 12px);
+  padding: 2.5rem 2.5rem 0rem 2.5rem;
+  box-shadow: var(--shadow, 0 8px 24px rgba(0,0,0,0.1));
+  text-align: center;
+  max-width: 850px;
+  margin: 0 auto 4rem;
+  margin-bottom: 11rem;
+}
+
+.support-description {
+  margin-bottom: 1.5rem;
+  padding-top: 1rem;
+
+  color: #4a4a55;
+  line-height: 1.6;
+  
+}
+
+.btn-primary {
+  background-color: #5f4e52; 
+  color: white;
+  border: none;
+  padding: 0.875rem 2rem;
+  border-radius: var(--radius, 6px);
+  font-weight: 600;
+  cursor: pointer;
+  transition: background-color 0.2s ease;
+}
+
+.btn-primary:hover {
+  background-color: #47393d;
+}
+
+
+.donation-row {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  margin-bottom: 1rem;
+  flex-wrap: wrap;
+  gap: 0.5rem;
+}
+
+.donation-label {
+  font-family: monospace;
+  display: block;
+  font-weight: 600;
+  color: #222;
+  min-width: 140px;
+}
+
+.donation-value {
+  font-family: monospace;
+  font-size: 1rem;
+  color: #111;
+  word-break: break-all;
+  flex: 1;
+}
+
+
+  .donation-details {
+    padding: 1rem;
+    flex-direction: column; 
+}
+
+
+.inf{
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+
+}
+
+.qr{
+   width: 100%;           /* растягивается по родителю */
+  height: auto;          /* высота подстраивается, пропорции не ломаются */
+  max-width: 300px;      /* не будет гигантским на больших экранах */
+  display: block;        /* убирает «лишние» пиксели снизу у картинки */
+  margin: 0 auto; 
+}
+
+
+
+
+.requisites-plain {
+  width: 100%;
+  max-width: 600px; /* Чтобы на больших экранах текст не растягивался в одну длинную строку */
+  margin: 0 auto;   /* Центрируем блок */
+  font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+  color: #333;      /* Тёмно-серый цвет текста, как на фото */
+  line-height: 1.5;
+  margin-bottom: none;
+}
+
+.requisite-row {
+  display: flex;
+  flex-direction: column;
+  margin-bottom: 1.2rem; /* Отступ между строками, как на фото */
+}
+
+.requisite-label {
+  font-weight: 700; /* Жирный шрифт для заголовков */
+  font-size: 0.95rem;
+  margin-bottom: 0.3rem;
+  color: #222;
+}
+
+.requisite-value {
+  font-weight: 400; /* Обычный шрифт для значений */
+  font-size: 0.95rem;
+  color: #444;
+  word-break: break-word; /* Перенос длинных строк (для адресов и счетов) */
+}
+
+/* Адаптив для очень узких экранов (мобильные) */
+@media (max-width: 480px) {
+  .requisites-plain {
+    padding: 0 1rem;
+  }
+  
+  .requisite-row {
+    margin-bottom: 1rem;
+  }
+}
+
+
+
+
+@media (max-width: 768px) {
+  .donation-details {
+  margin-top: 2rem;
+  text-align: left;
+  background: #f9fafb;
+  padding: 1.5rem;
+  border-radius: var(--radius, 8px);
+}
+
+ .Aboutpage{
+  margin: 1rem 1rem;
+  text-align: center;
+ 
+}
+  
+
+
+  
+  .hero-emote {
+    width: 50px;
+    height: 50px;
+  }
+
+  .hero-project h1 {
+    font-size: clamp(1.5rem, 5vw, 2.4rem); 
+    line-height: 1.2;
+  }
+  .project-intro p {
+  margin: 20px 10px;
+}
+
+  .hero-lead {
+    font-size: 18px; 
+    max-width: none;
+  }
+
+  
+  .project-intro p {
+    font-size: 18px;
+    margin-bottom: 1rem;
+  }
+
+
+  .activities-grid,
+  .facts-grid {
+    grid-template-columns: 1fr !important; 
+    gap: 1rem;
+    margin: auto 0; 
+  }
+
+
+  .activity-card {
+    padding: 1rem;
+    min-width: 200px; 
+  }
+
+  
+  .fact-value {
+    font-size: 1rem;
+  }
+
+  .fact-label {
+    font-size: 0.8rem;
+  }
+
+
+  .support-section {
+    padding: 1rem 1rem 0rem 1rem;
+    margin: 1rem 1rem 2rem 1rem;
+  }
+
+
+ .donation-row {
+    flex-direction: column;
+    align-items: stretch;
+  }
+  .donation-label {
+    min-width: auto;
+  }
+
+
+  .inf{
+  display: grid;
+  grid-template-columns: 1fr;
+  
+
+}
+
+.qr{
+   width: 100%;           /* растягивается по родителю */
+  height: auto;          /* высота подстраивается, пропорции не ломаются */
+  max-width: 300px;      /* не будет гигантским на больших экранах */
+  display: block;        /* убирает «лишние» пиксели снизу у картинки */
+  margin: 1rem auto; 
+
+}
+}
