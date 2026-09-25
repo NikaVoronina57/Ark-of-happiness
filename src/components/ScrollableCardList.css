@@ -13,8 +13,6 @@
   scrollbar-width: none; /* Firefox */
 }
 
-с
-
 .card-item {
   flex: 0 0 260px; /* фиксированная ширина карточки */
   min-width: 260px;
@@ -59,4 +57,59 @@
 .scroll-btn-icon {
   font-size: 1.2rem;
   line-height: 1;
+}
+@media (max-width: 768px) {
+  .scroll-list-container {
+    position: relative;
+    max-width: 100%;
+    margin: 0;
+    padding: 20px 0;
+    overflow: hidden; /* главное: не даёт стрелкам вылезать */
+  }
+
+  .scroll-wrapper {
+    display: flex;
+    overflow-x: auto;
+    gap: 20px;
+    padding: 0 16px; /* отступ по бокам, чтобы крайние карточки не прилипали */
+    scrollbar-width: none; /* Firefox */
+    -ms-overflow-style: none; /* IE/Edge */
+  }
+  .scroll-wrapper::-webkit-scrollbar {
+    display: none;
+  }
+
+  .card-item {
+    flex: 0 0 240px; /* чуть меньше, чтобы помещалось на узких экранах */
+    min-width: 240px;
+  }
+
+  .scroll-btn {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-70%);
+    width: 40px;
+    height: 40px;
+    border-radius: 50%; /* можно сделать круглыми на мобильном — аккуратнее смотрится */
+    background-color: rgba(255, 255, 255, 0.92);
+    color: #555;
+    box-shadow: 0 6px 18px rgba(0, 0, 0, 0.12);
+  }
+
+  .scroll-btn:hover {
+    background-color: #fff;
+    transform: translateY(-50%) scale(1.08);
+    box-shadow: 0 8px 22px rgba(0, 0, 0, 0.15);
+  }
+
+  /* Убираем отрицательные margin и ставим небольшой отступ от края */
+  .scroll-btn-prev {
+    left: 12px;
+    margin-left: 0; /* было -22px — это и вылезало за экран */
+  }
+
+  .scroll-btn-next {
+    right: 12px;
+    margin-right: 0; /* было -22px */
+  }
 }

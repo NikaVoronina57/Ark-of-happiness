@@ -117,10 +117,8 @@
 
 @media (max-width: 768px) {
   .header-container {
-    flex-direction: row;
-    align-items: center;
-    padding: 0 auto;
-    justify-content: space-between;
+    position: relative; /* база для абсолютного позиционирования бургера */
+    padding: 0 16px;
   }
 
   .logo {
@@ -195,6 +193,7 @@
     text-align: center;
     width: 90%;
     max-width: 400px;
+
   }
 
   .mobile-link {
@@ -226,5 +225,6 @@
   .cart-btn {
     display: inline;
     white-space: nowrap;
+    
   }
 }
